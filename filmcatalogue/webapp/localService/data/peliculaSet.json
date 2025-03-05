@@ -1,0 +1,58 @@
+[
+    {
+        "titulo": "John Wick 4",
+        "autor": "Chad Stahelski",
+        "anio": "2023",
+        "caratula": "https://pics.filmaffinity.com/john_wick_chapter_4-101402041-large.jpg",
+        "id": "JW4-2023"
+    },
+    {
+        "titulo": "65",
+        "autor": "Scott Beck, Bryan Woods",
+        "anio": "2023",
+        "caratula": "https://pics.filmaffinity.com/65-699908523-large.jpg",
+        "id": "65-2023"
+    },
+    {
+        "titulo": "El hotel de los líos. García y García 2",
+        "autor": "Ana Murugarren",
+        "anio": "2023",
+        "caratula": "https://pics.filmaffinity.com/el_hotel_de_los_lios-546257923-large.jpg",
+        "id": "GG2-2023"
+    },
+    {
+        "titulo": "Un paseo con Madeleine",
+        "autor": "Christian Carion",
+        "anio": "2022",
+        "caratula": "https://pics.filmaffinity.com/une_belle_course-361062852-large.jpg",
+        "id": "MAD-2023"
+    },
+    {
+        "titulo": "¡Shazam! La furia de los dioses",
+        "autor": "David F. Sandberg",
+        "anio": "2023",
+        "caratula": "https://pics.filmaffinity.com/shazam_fury_of_the_gods-942384944-large.jpg",
+        "id": "SHA-2023"
+    },
+    {
+        "titulo": "Scream VI",
+        "autor": "Matt Bettinelli-Olpin, Tyler Gillett",
+        "anio": "2023",
+        "caratula": "https://pics.filmaffinity.com/scream_vi-826495425-large.jpg",
+        "id": "SVI-2023"
+    },
+    {
+        "titulo": "Todo a la vez en todas partes",
+        "autor": "Dan Kwan, Daniel Scheinert, Daniels",
+        "anio": "2022",
+        "caratula": "https://pics.filmaffinity.com/everything_everywhere_all_at_once-245462960-large.jpg",
+        "id": "TTP-2023"
+    },
+    {
+        "titulo": "La ballena (The Whale)",
+        "autor": "Darren Aronofsky",
+        "anio": "2022",
+        "caratula": "https://pics.filmaffinity.com/the_whale-293958603-large.jpg",
+        "id": "TW-2023"
+    }
+]

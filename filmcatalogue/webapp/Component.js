@@ -50,7 +50,7 @@ sap.ui.define([
                     const moviesModel = new JSONModel();
 
                     // Realiza la solicitud de datos a la API de TMDb para obtener la lista de películas populares
-                    var dataAPI = "https://api.themoviedb.org/3/movie/popular?api_key="+API_Key+"&page=1";
+                    var dataAPI = "https://api.themoviedb.org/3/movie/upcoming?api_key="+API_Key;
 
                     // La URL incluye la API key y especifica la primera página de resultados
                     moviesModel.loadData(dataAPI);

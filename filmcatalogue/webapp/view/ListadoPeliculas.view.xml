@@ -1,4 +1,4 @@
-<mvc:View xmlns:core="sap.ui.core" controllerName="filmcatalogue.controller.ListadoPeliculas" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%">
+<mvc:View xmlns:core="sap.ui.core" controllerName="filmcatalogue.controller.ListadoPeliculas" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" height="100%">
     <Page id="_IDGenPage">
         <!--
         <List id="FilmListCatalogue" headerText="Peliculas" items="{path: 'moviesModel>/results'}">

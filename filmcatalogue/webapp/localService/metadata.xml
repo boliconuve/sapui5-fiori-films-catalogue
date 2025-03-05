@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZCURSO_OD_JPD_PELICULAS_SRV" xml:lang="es" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="pelicula" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Número" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="titulo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="autor" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="anio" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="CHAR4" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="caratula" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="actorSet" Relationship="ZCURSO_OD_JPD_PELICULAS_SRV.peliculaToActores" FromRole="FromRole_peliculaToActores" ToRole="ToRole_peliculaToActores"/>
+            </EntityType>
+            <EntityType Name="actor" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="dni"/>
+                    <PropertyRef Name="idPelicula"/>
+                </Key>
+                <Property Name="dni" Type="Edm.String" Nullable="false" MaxLength="9" sap:unicode="false" sap:label="CpoNum (9)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="nombre" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="apellidos" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="idPelicula" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Número" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="pelicula" Relationship="ZCURSO_OD_JPD_PELICULAS_SRV.peliculaToActores" FromRole="ToRole_peliculaToActores" ToRole="FromRole_peliculaToActores"/>
+            </EntityType>
+            <Association Name="peliculaToActores" sap:content-version="1">
+                <End Type="ZCURSO_OD_JPD_PELICULAS_SRV.pelicula" Multiplicity="1" Role="FromRole_peliculaToActores"/>
+                <End Type="ZCURSO_OD_JPD_PELICULAS_SRV.actor" Multiplicity="*" Role="ToRole_peliculaToActores"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_peliculaToActores">
+                        <PropertyRef Name="id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_peliculaToActores">
+                        <PropertyRef Name="idPelicula"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZCURSO_OD_JPD_PELICULAS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="peliculaSet" EntityType="ZCURSO_OD_JPD_PELICULAS_SRV.pelicula" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="actorSet" EntityType="ZCURSO_OD_JPD_PELICULAS_SRV.actor" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="peliculaToActoresSet" Association="ZCURSO_OD_JPD_PELICULAS_SRV.peliculaToActores" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="peliculaSet" Role="FromRole_peliculaToActores"/>
+                    <End EntitySet="actorSet" Role="ToRole_peliculaToActores"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="http://alihapgwd00.alimerka2008.alimerka.es:8000/sap/opu/odata/sap/ZCURSO_OD_JPD_PELICULAS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://alihapgwd00.alimerka2008.alimerka.es:8000/sap/opu/odata/sap/ZCURSO_OD_JPD_PELICULAS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,50 @@
+[
+    {
+        "dni": "hsqpbAWTZ",
+        "nombre": "Keanu",
+        "apellidos": "Reeves",
+        "idPelicula": "JW4-2023"
+    },
+    {
+        "dni": "gDuNIhzKi",
+        "nombre": "Adam",
+        "apellidos": "Driver",
+        "idPelicula": "65-2023"
+    },
+    {
+        "dni": "TQElvWNMv",
+        "nombre": "José",
+        "apellidos": "Mota",
+        "idPelicula": "GG2-2023"
+    },
+    {
+        "dni": "uVSletDIu",
+        "nombre": "Line",
+        "apellidos": "Renaud",
+        "idPelicula": "MAD-2023"
+    },
+    {
+        "dni": "RoLaESXva",
+        "nombre": "Zachary",
+        "apellidos": "Levi",
+        "idPelicula": "SHA-2023"
+    },
+    {
+        "dni": "lVGDCyWJZ",
+        "nombre": "Jenna",
+        "apellidos": "Ortega",
+        "idPelicula": "SVI-2023"
+    },
+    {
+        "dni": "xzPVeglbp",
+        "nombre": "Michelle",
+        "apellidos": "Yeoh",
+        "idPelicula": "TTP-2023"
+    },
+    {
+        "dni": "mxeFjKlEe",
+        "nombre": "Brendan",
+        "apellidos": "Fraser",
+        "idPelicula": "TW-2023"
+    }
+]

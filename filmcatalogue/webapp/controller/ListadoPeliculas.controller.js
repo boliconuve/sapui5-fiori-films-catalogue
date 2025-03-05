@@ -14,7 +14,21 @@ sap.ui.define([
             },
 
             onPress: function (oEvent) {
-                alert("Presionado!");
+                // Conseguimos el path a la pelicula seleccionada en la tabla
+                const oPeliPath = oEvent.getSource().getBindingContext("moviesModel").getPath();
+                let nPeliLength = oPeliPath.split("/").length - 1;
+                let nPosPelicula = oPeliPath.split("/")[nPeliLength];
+
+                alert("Presionado la pelicula en la posición: " + nPosPelicula);
+
+                // Conseguimos el nombre de la pelicula presionada
+                
+
+                
+            },
+
+            onSearch: function () {
+
             }
 
 
