@@ -2,9 +2,6 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller",
     'sap/ui/model/json/JSONModel'
 ],
-    /**
-     * @param {typeof sap.ui.core.mvc.Controller} Controller
-     */
     function (Controller, JSONModel) {
         "use strict";
 
@@ -19,10 +16,12 @@ sap.ui.define([
                 let nPeliLength = oPeliPath.split("/").length - 1;
                 let nPosPelicula = oPeliPath.split("/")[nPeliLength];
 
-                alert("Presionado la pelicula en la posición: " + nPosPelicula);
+                //alert("Presionado la pelicula en la posición: " + nPosPelicula);
 
                 // Conseguimos el nombre de la pelicula presionada
-                
+                const moviesModel = this.getView().getModel("moviesModel").getData();
+                const sPelicula = moviesModel.results[nPosPelicula].title;
+                alert("Pelicula seleccionada: " + sPelicula);
 
                 
             },

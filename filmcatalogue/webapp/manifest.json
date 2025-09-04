@@ -87,25 +87,25 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "async": true,
-        "viewPath": "filmcatalogue.view",
         "controlAggregation": "pages",
         "controlId": "app",
-        "clearControlAggregation": false
+        "clearControlAggregation": false,
+        "path": "filmcatalogue.view"
       },
       "routes": [
         {
-          "name": "RouteListadoPeliculas",
+          "name": "ListadoPeliculas",
           "pattern": ":?query:",
           "target": [
-            "TargetListadoPeliculas"
+            "ListadoPeliculas"
           ]
         }
       ],
       "targets": {
-        "TargetListadoPeliculas": {
+        "ListadoPeliculas": {
           "viewType": "XML",
           "transition": "slide",
-          "clearControlAggregation": false,
+          "clearControlAggregation": true,
           "viewId": "ListadoPeliculas",
           "viewName": "ListadoPeliculas"
         }
